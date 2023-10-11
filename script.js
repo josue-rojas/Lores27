@@ -16,7 +16,6 @@ function verifyPassword () {
     hidden.forEach(function (element) {
       element.classList.remove("hide");
     });
+    document.getElementById("secret").classList.add("hide");
   }
-
-  document.getElementById("secret").classList.add("hide");
 }
