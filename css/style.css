@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: rgb(250, 230, 235);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+p, h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0; 
+}
+
+.alt-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* h2 {
+  font-weight: 500;
+} */
+
+
+/* .outline-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+} */
+
+.top-text {
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 2.25rem;
+  margin-top: -35px;
+}
+
+.party {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  margin-top: -20px;
+}
+
+.date {
+  margin-bottom: 5px;
+}
+
+.address {
+  margin-bottom: 15px;
+}
+
+.rsvp {
+  margin-bottom: 15px;
+}
+
+
+.small-font {
+  font-size: 0.8rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font-main-color {
+  color: rgb(196, 96, 139);
+  -webkit-text-fill-color: rgb(196, 96, 139);
+}
+
+.font-second-color {
+  color: rgb(184, 47, 79);
+  /* color: rgb(2424, 62, 108); */
+  -webkit-text-fill-color: rgb(2424, 62, 108);
+  /* black outline for font */
+  -webkit-text-stroke-width: 1px;
+
+}
+
+.font-third-color {
+  /* color: rgb(101, 171, 248); */
+  color: rgb(64, 103, 147);
+  -webkit-text-fill-color: rgb(101, 171, 248);
+  /* black outline for font */
+  -webkit-text-stroke-width: 1px;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+  max-width: 400px;
+  padding: 20px 20px 60px;
+  text-align: center;
+  width: 100vw;
+}
+
+.birthday-image {
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+
+/* balloon css */
+.balloons {
+  align-items: center;
+  display: flex;
+  height: calc(100vh - 200px);
+  justify-content: center;
+  left: 0;
+  min-width: 400px;
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+.balloon {
+  display:inline-block;
+   width:120px;
+  height:145px;
+  background:hsl(273, 67%, 68%);
+  border-radius:80%;
+  position:relative;
+  box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+  margin:20px 30px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloons 4s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+
+@keyframes balloons {
+  0%,100%{ transform:translateY(0) rotate(-4deg); }
+  50%{ transform:translateY(-25px) rotate(4deg); }
+}
+
+
+.balloon:before {
+  content:"▲";
+  font-size:20px;
+  color:hsl(215,30%,50%);
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-12px;
+  z-index:-100;
+}
+
+.balloon:after {
+ display:inline-block; top:153px;
+  position:absolute;
+  height:250px;
+  width:1px;
+  margin: 0 calc(120px - 50%);
+  content:"";
+  background:rgba(0,0,0,0.2); 
+}
+
+.balloon:nth-child(2){ background:hsl(304, 40%, 65%); animation-duration:3.5s; }
+.balloon:nth-child(2):before { color:hsl(245,40%,65%);  }
+
+.balloon:nth-child(3){ background:hsl(139,50%,60%); animation-duration:3s; }
+.balloon:nth-child(3):before { color:hsl(139,30%,50%);  }
+
+.balloon:nth-child(4){ background:hsl(59,50%,58%); animation-duration:4.5s; }
+.balloon:nth-child(4):before { color:hsl(59,30%,52%);  }
+
+.balloon:nth-child(5){ background:hsl(23,55%,57%); animation-duration:5s; }
+.balloon:nth-child(5):before { color:hsl(23,44%,46%);  }
+
