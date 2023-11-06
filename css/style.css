@@ -191,3 +191,70 @@ p, h1,h2,h3,h4,h5,h6 {
 .balloon:nth-child(5){ background:hsl(23,55%,57%); animation-duration:5s; }
 .balloon:nth-child(5):before { color:hsl(23,44%,46%);  }
 
+
+
+
+.wrap-deco {
+  position: absolute;
+  top:-230px;
+  left: calc(50% - 115px)
+}
+
+.decorations {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+.decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after {
+  content:"";
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  width:0;
+  height:0;
+}
+
+.decorations:before {
+  border-top: 40px solid #f15bb5;
+  top:297px;
+  left:210px;
+  transform: rotate(-5deg);
+}
+
+.decorations:after{
+  border-top: 40px solid #f4d35e;
+  top:288px;
+  left:260px;
+  transform: rotate(-17deg);
+}
+
+.decorationsTwo:before {
+  border-top: 40px solid #00f5d4;
+  top:268px;
+  left:315px;
+  transform: rotate(-30deg);
+}
+
+.decorationsTwo:after, .decorationsThree:after {
+  border-top: 40px solid #9b5de5;
+  top:238px;
+  left:355px;
+  transform: rotate(-40deg);
+}
+
+.wrap-decoTwo {
+  transform: scaleX(-1);
+  position: absolute;
+  top:-230px;
+  left:calc(50% + 115px); 
+}
+
+.decorationsThree:before {
+  border-top: 40px solid #00bbf9;
+  top:268px;
+  left:315px;
+  transform: rotate(-30deg);
+}
